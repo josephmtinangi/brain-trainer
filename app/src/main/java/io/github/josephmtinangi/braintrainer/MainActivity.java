@@ -12,7 +12,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Button startButton;
-    ArrayList<Integer> answers;
+    ArrayList<Integer> answers = new ArrayList<>();
     int locationOfCorrectAnswer;
 
     public void start(View view){
@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         startButton = (Button) findViewById(R.id.startButton);
         TextView sumTextView = (TextView) findViewById(R.id.sumTextView);
+        Button button0 = (Button) findViewById(R.id.button0);
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
 
         Random rand = new Random();
 
@@ -50,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
                 answers.add(incorrectAnswer);
             }
         }
+
+        button0.setText(Integer.toString(answers.get(0)));
+        button1.setText(Integer.toString(answers.get(1)));
+        button2.setText(Integer.toString(answers.get(2)));
+        button3.setText(Integer.toString(answers.get(3)));
 
     }
 }
