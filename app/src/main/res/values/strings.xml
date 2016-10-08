@@ -3,4 +3,9 @@
     <string name="goLabel">Go</string>
     <string name="timerLabel">30s</string>
     <string name="_3">3</string>
+    <string name="about">About</string>
+    <string name="developed_by_n_joseph_mtinangi">Developed by \n Joseph Mtinangi</string>
+    <string name="visit_my_website">Visit my website</string>
+    <string name="help">Help</string>
+    <string name="play_by_pressing_start_and_then_begin_to_answer_the_questions_the_more_faster_you_are_the_more_the_score_you_can_get">Play by pressing start and then begin to answer the questions. The more faster you are the more the score you can get.</string>
 </resources>

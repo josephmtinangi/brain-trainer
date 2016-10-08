@@ -11,7 +11,7 @@
     tools:context="io.github.josephmtinangi.braintrainer.AboutActivity">
 
     <TextView
-        android:text="About"
+        android:text="@string/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,7 +21,7 @@
         android:textSize="42sp" />
 
     <TextView
-        android:text="Developed by \n Joseph Mtinangi"
+        android:text="@string/developed_by_n_joseph_mtinangi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/aboutTextView"
@@ -38,6 +38,6 @@
         android:layout_marginTop="63dp"
         android:id="@+id/websiteTextView"
         android:textSize="18sp"
-        android:text="Visit my website" />
+        android:text="@string/visit_my_website" />
 
 </RelativeLayout>

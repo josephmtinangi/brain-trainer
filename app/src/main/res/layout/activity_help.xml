@@ -11,7 +11,7 @@
     tools:context="io.github.josephmtinangi.braintrainer.HelpActivity">
 
     <TextView
-        android:text="Help"
+        android:text="@string/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,7 +21,7 @@
         android:textSize="42sp" />
 
     <TextView
-        android:text="Play by pressing start and then begin to answer the questions. The more faster you are the more the score you can get."
+        android:text="@string/play_by_pressing_start_and_then_begin_to_answer_the_questions_the_more_faster_you_are_the_more_the_score_you_can_get"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/helpTextView"
