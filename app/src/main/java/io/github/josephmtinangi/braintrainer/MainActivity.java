@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     TextView timerTextView;
     Button playAgainButton;
     RelativeLayout gameRelativeLayout;
+    GridLayout gridLayout;
 
     ArrayList<Integer> answers = new ArrayList<>();
     int locationOfCorrectAnswer;
@@ -32,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
     int numberOfQuestions = 0;
 
     public void playAgain(View view){
+
+        gridLayout.setVisibility(View.VISIBLE);
+        sumTextView.setVisibility(View.VISIBLE);
+        timerTextView.setVisibility(View.VISIBLE);
+        pointsTextView.setVisibility(View.VISIBLE);
+
         score = 0;
         numberOfQuestions = 0;
         timerTextView.setText("30s");
@@ -50,9 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                gridLayout.setVisibility(View.INVISIBLE);
+                sumTextView.setVisibility(View.INVISIBLE);
+                timerTextView.setVisibility(View.INVISIBLE);
+                pointsTextView.setVisibility(View.INVISIBLE);
                 playAgainButton.setVisibility(View.VISIBLE);
                 timerTextView.setText("0s");
                 resultTextView.setText("Your score is " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+
             }
         }.start();
 
@@ -131,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.button3);
         timerTextView = (TextView) findViewById(R.id.timerTextView);
         playAgainButton = (Button) findViewById(R.id.playAgainButton);
+        gridLayout = (GridLayout) findViewById(R.id.gridLayout);
 
         gameRelativeLayout = (RelativeLayout) findViewById(R.id.gameRelativeLayout);
 
