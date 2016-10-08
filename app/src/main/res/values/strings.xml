@@ -2,4 +2,5 @@
     <string name="app_name">Brain Trainer</string>
     <string name="goLabel">Go</string>
     <string name="timerLabel">30s</string>
+    <string name="_3">3</string>
 </resources>
