@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         locationOfCorrectAnswer = rand.nextInt(4);
 
+        answers.clear();
+
         int incorrectAnswer;
 
         for( int i = 0; i < 4; i++){
