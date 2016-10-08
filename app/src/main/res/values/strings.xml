@@ -8,4 +8,10 @@
     <string name="visit_my_website">Visit my website</string>
     <string name="help">Help</string>
     <string name="play_by_pressing_start_and_then_begin_to_answer_the_questions_the_more_faster_you_are_the_more_the_score_you_can_get">Play by pressing start and then begin to answer the questions. The more faster you are the more the score you can get.</string>
+    <string name="_0_0">0/0</string>
+    <string name="_4">4</string>
+    <string name="_31_12">31 + 12</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="play_again">Play Again</string>
 </resources>
