@@ -22,10 +22,40 @@ public class MainActivity extends AppCompatActivity {
     Button button2;
     Button button3;
     TextView timerTextView;
+    Button playAgainButton;
     ArrayList<Integer> answers = new ArrayList<>();
     int locationOfCorrectAnswer;
     int score = 0;
     int numberOfQuestions = 0;
+
+    public void playAgain(View view){
+        score = 0;
+        numberOfQuestions = 0;
+        timerTextView.setText("30s");
+        pointsTextView.setText("0/0");
+        resultTextView.setText("");
+        playAgainButton.setVisibility(View.INVISIBLE);
+
+        generateQuestion();
+
+        new CountDownTimer(3100, 1000){
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                playAgainButton.setVisibility(View.VISIBLE);
+                timerTextView.setText("0s");
+                resultTextView.setText("Your score is " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+            }
+        }.start();
+
+
+
+    }
 
     public void generateQuestion(){
 
@@ -94,22 +124,9 @@ public class MainActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         timerTextView = (TextView) findViewById(R.id.timerTextView);
+        playAgainButton = (Button) findViewById(R.id.playAgainButton);
 
-        generateQuestion();
-
-        new CountDownTimer(3100, 1000){
-
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
-            }
-
-            @Override
-            public void onFinish() {
-                timerTextView.setText("0s");
-                resultTextView.setText("Your score is " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
-            }
-        }.start();
+        playAgain(findViewById(R.id.playAgainButton));
 
     }
 }
