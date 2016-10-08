@@ -65,7 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/sumTextView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
 
         <Button
         android:text="3"
@@ -129,4 +130,13 @@
 
 
     </GridLayout>
+
+    <TextView
+        android:text="Correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultTextView"
+        android:textSize="40sp"
+        android:layout_below="@+id/startButton"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
