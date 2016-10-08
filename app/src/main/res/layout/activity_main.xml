@@ -62,24 +62,71 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/sumTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
+
+        <Button
+        android:text="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        android:tag="0"
+        android:id="@+id/button0"
+        android:textSize="80sp"
+        android:background="?android:attr/colorPrimary"
+        android:onClick="chooseAnswer" />
+
+        <Button
+            android:text="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:tag="1"
+            android:id="@+id/button1"
+            android:textSize="80sp"
+            android:background="@android:color/holo_orange_dark"
+            android:onClick="chooseAnswer" />
 
         <Button
             android:text="3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_row="0"
+            android:layout_row="1"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_gravity="fill"
-            android:tag="0"
+            android:tag="2"
             android:id="@+id/button2"
             android:textSize="80sp"
-            android:background="?android:attr/colorPrimary"
+            android:background="?android:attr/colorControlActivated"
             android:onClick="chooseAnswer" />
+
+        <Button
+            android:text="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:tag="3"
+            android:id="@+id/button3"
+            android:textSize="80sp"
+            android:background="@android:color/holo_purple"
+            android:onClick="chooseAnswer" />
+
+
     </GridLayout>
 </RelativeLayout>
