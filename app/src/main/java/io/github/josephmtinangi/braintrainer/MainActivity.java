@@ -1,5 +1,6 @@
 package io.github.josephmtinangi.braintrainer;
 
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button button1;
     Button button2;
     Button button3;
+    TextView timerTextView;
     ArrayList<Integer> answers = new ArrayList<>();
     int locationOfCorrectAnswer;
     int score = 0;
@@ -91,8 +93,23 @@ public class MainActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
+        timerTextView = (TextView) findViewById(R.id.timerTextView);
 
         generateQuestion();
+
+        new CountDownTimer(3100, 1000){
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                timerTextView.setText("0s");
+                resultTextView.setText("Your score is " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+            }
+        }.start();
 
     }
 }
