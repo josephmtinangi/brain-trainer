@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     Button button3;
     TextView timerTextView;
     Button playAgainButton;
+    RelativeLayout gameRelativeLayout;
+
     ArrayList<Integer> answers = new ArrayList<>();
     int locationOfCorrectAnswer;
     int score = 0;
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         generateQuestion();
 
-        new CountDownTimer(3100, 1000){
+        new CountDownTimer(30100, 1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -108,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View view){
         startButton.setVisibility(View.INVISIBLE);
+        gameRelativeLayout.setVisibility(View.VISIBLE);
+
+        playAgain(findViewById(R.id.playAgainButton));
     }
 
     @Override
@@ -126,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         timerTextView = (TextView) findViewById(R.id.timerTextView);
         playAgainButton = (Button) findViewById(R.id.playAgainButton);
 
-        playAgain(findViewById(R.id.playAgainButton));
+        gameRelativeLayout = (RelativeLayout) findViewById(R.id.gameRelativeLayout);
 
     }
 }
